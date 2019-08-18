@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
 }
+.left {
+    background: #111;
+}
 
 .left img {
     width: 100%;
@@ -19,11 +22,11 @@
     cursor: pointer;
 }
 ion-icon {
-    color: #333;
+    color: #eee;
     cursor: pointer;
 }
 ion-icon:hover {
-    color: #111111;
+    color: #010101;
 }
 
 .right h1 {
@@ -45,15 +48,45 @@ ion-icon:hover {
 .right .work {
     min-height: 200px;
 }
-.work h1 {
+.right .work h1 {
     margin: 20px;
+    font-size: 20px;
+}
+.right .work h2 {
+    font-size: 14px;
+    margin: 5px;
 }
 
-.work .one, .work .two, .work .three, .work .four {
+.work ul {
+    margin: 0;
+    padding: 0;
+}
+.work ul li {
+    display: inline-block;
+    text-decoration: beige;
+}
+
+.work .one, .work .two, .work .three, .work .four, .work .five {
     width: 80%;
     margin: auto;
 }
-.one img, .two img, .three img, .four img {
+.work ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 12px;
+}
+.work .one {
+    list-style: none;
+    display: inline-block;
+}
+.work ion-icon {
+    color: #ccc;
+}
+.work ion-icon:hover {
+    color: #777;
+}
+.one img, .two img, .three img, .four img, .five img {
     width: 100%;
 }
 
@@ -72,8 +105,8 @@ ion-icon:hover {
         width: 80%;
         margin: auto;
     }
-    .work .one, .work .two, .work .three, .work .four {
-        width: 25%;
+    .work .one, .work .two, .work .three, .work .four, .work .five {
+        width: 20%;
         float: left;
     }
     .one img, .two img, .three img, .four img {
@@ -102,7 +135,7 @@ ion-icon:hover {
         font-size: 15px;
     }
     .right p {
-        margin: 2.4em 5.5em;
+        margin: 1.4em 5.5em;
     }
 
     .work {
