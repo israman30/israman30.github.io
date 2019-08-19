@@ -29,6 +29,13 @@ ion-icon {
 ion-icon:hover {
     color: #010101;
 }
+.left p {
+    color: #eee;
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+}
 
 .right h1 {
     text-align: center;
