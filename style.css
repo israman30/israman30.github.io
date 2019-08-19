@@ -24,6 +24,7 @@
 ion-icon {
     color: #eee;
     cursor: pointer;
+    font-size: 25px;
 }
 ion-icon:hover {
     color: #010101;
@@ -87,6 +88,7 @@ div.one .two .three .four .five {
 }
 .work ion-icon {
     color: #ccc;
+    font-size: 15px;
 }
 .work ion-icon:hover {
     color: #777;
