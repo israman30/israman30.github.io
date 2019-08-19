@@ -52,9 +52,13 @@ ion-icon:hover {
     margin: 20px;
     font-size: 20px;
 }
+
+div.one .two .three .four .five {
+    text-align: center;
+}
 .right .work h2 {
     font-size: 14px;
-    margin: 5px;
+    margin: 25px 0 5px 0;
 }
 
 .work ul {
@@ -64,10 +68,11 @@ ion-icon:hover {
 .work ul li {
     display: inline-block;
     text-decoration: beige;
+    margin-bottom: 20px;
 }
 
 .work .one, .work .two, .work .three, .work .four, .work .five {
-    width: 80%;
+    width: 100%;
     margin: auto;
 }
 .work ul {
@@ -90,7 +95,7 @@ ion-icon:hover {
     width: 100%;
 }
 
-
+/* ============ MEDIA ============ */
 @media(min-width:768px){
     .right h1 {
         font-size: 40px;
@@ -109,7 +114,7 @@ ion-icon:hover {
         width: 20%;
         float: left;
     }
-    .one img, .two img, .three img, .four img {
+    .one img, .two img, .three img, .four img, .five img {
         width: 100%;
         margin: auto;
     }
@@ -120,7 +125,7 @@ ion-icon:hover {
     }
 }
 
-@media(min-width:1365px) {
+@media(min-width:1257px) {
     .left {
         float: right;
         width: 50%;
