@@ -311,25 +311,54 @@ ion-icon:hover {
 }
 
 @media (min-width: 1257px) {
+    html,
+    body {
+        height: 100%;
+        overflow: hidden;
+    }
+
     .left {
         position: fixed;
         top: 0;
         right: 0;
         width: 50%;
         height: 100vh;
-        overflow-y: auto;
+        height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
     }
+
     .left img {
+        flex: 1 1 auto;
+        min-height: 0;
+        width: 100%;
         max-height: none;
-        min-height: 45vh;
-        flex: 1;
+        object-fit: cover;
+        object-position: center top;
     }
+
+    .left ul {
+        flex-shrink: 0;
+    }
+
+    .left p {
+        flex-shrink: 0;
+        padding-bottom: 20px;
+    }
+
     .right {
         float: left;
         width: 50%;
-        min-height: 100vh;
+        height: 100vh;
+        height: 100dvh;
+        min-height: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
         padding-bottom: 2rem;
     }
+
     .projects {
         grid-template-columns: repeat(1, 1fr);
     }
