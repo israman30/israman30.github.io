@@ -521,18 +521,22 @@ a:hover {
 }
 
 .project-media.is-image {
-    /* Keep the same banner box size as other cards,
-       but fit the image inside (no stretch). */
-    background: var(--surface-2);
-    padding: 10px 12px;
+    /* Full-bleed banner (matches original card banner look) */
+    background: var(--surface);
+    padding: 0;
 }
 
 .project-media.is-image img {
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: contain;
-    object-position: center center;
+    object-fit: cover;
+    object-position: 50% 20%;
+}
+
+/* NeatOS screenshot needs a slightly higher crop */
+.project-media.is-neatos img {
+    object-position: 50% 10%;
 }
 
 .project-media ion-icon {
