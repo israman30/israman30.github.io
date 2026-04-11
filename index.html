@@ -65,14 +65,15 @@
         </aside>
 
         <main id="content" class="content">
+            <p id="live-region" class="sr-only" aria-live="polite"></p>
             <header class="hero">
                 <p class="eyebrow">Mobile architecture · iOS platform engineering</p>
                 <h2>Designing and shipping accessible, high-quality mobile products.</h2>
                 <p class="intro" id="about">
-                    Senior Mobile Engineer & Architect with over 10 years of experience building high-scale iOS ecosystems, 
-                    including tenure at Microsoft. I specialize in architecting modular SwiftUI and UIKit experiences that prioritize performance, 
-                    deep accessibility (WCAG), and engineering excellence. Beyond code, 
-                    I am a pragmatic leader who partners cross-functionally to translate complex product visions into resilient, 
+                    Senior Mobile Engineer &amp; Architect with 10+ years of experience building large-scale iOS ecosystems,
+                    including tenure at Microsoft. I specialize in architecting modular SwiftUI and UIKit experiences that prioritize performance,
+                    deep accessibility (WCAG), and engineering excellence. Beyond code,
+                    I’m a pragmatic leader who partners cross-functionally to translate complex product visions into resilient,
                     maintainable software while mentoring the next generation of engineers.
                 </p>
 
@@ -83,7 +84,7 @@
 
                 <div class="stats" aria-label="Highlights">
                     <div class="stat">
-                        <span class="stat-kpi">9+</span>
+                        <span class="stat-kpi">10+</span>
                         <span class="stat-label">Years shipping apps</span>
                     </div>
                     <div class="stat">
@@ -104,16 +105,16 @@
                 </div>
 
                 <div class="filters" role="group" aria-label="Project filters">
-                    <button class="chip is-active" type="button" data-filter="all">All</button>
-                    <button class="chip" type="button" data-filter="ios">iOS</button>
-                    <button class="chip" type="button" data-filter="macos">macOS</button>
-                    <button class="chip" type="button" data-filter="library">Library</button>
+                    <button class="chip is-active" type="button" data-filter="all" aria-pressed="true" aria-controls="projects-list">All</button>
+                    <button class="chip" type="button" data-filter="ios" aria-pressed="false" aria-controls="projects-list">iOS</button>
+                    <button class="chip" type="button" data-filter="macos" aria-pressed="false" aria-controls="projects-list">macOS</button>
+                    <button class="chip" type="button" data-filter="library" aria-pressed="false" aria-controls="projects-list">Library</button>
                 </div>
 
-                <div class="projects">
+                <div class="projects" id="projects-list">
                     <article class="project-card" data-tags="ios swiftui widgetkit">
                         <div class="project-media is-image" style="--media-y: 18%;" aria-hidden="true">
-                            <img src="./img/self-analytics.png" alt="">
+                            <img src="./img/self-analytics.png" alt="" loading="lazy" decoding="async">
                         </div>
                         <div class="project-top">
                             <h3>Device Health</h3>
@@ -131,7 +132,7 @@
 
                     <article class="project-card" data-tags="ios uikit swiftui widgetkit">
                         <div class="project-media is-image" style="--media-y: 22%;" aria-hidden="true">
-                            <img src="./img/tip-calculator.png" alt="">
+                            <img src="./img/tip-calculator.png" alt="" loading="lazy" decoding="async">
                         </div>
                         <div class="project-top">
                             <h3>Tip Calculator</h3>
@@ -149,7 +150,7 @@
 
                     <article class="project-card" data-tags="ios swiftui">
                         <div class="project-media is-image" style="--media-y: 30%;" aria-hidden="true">
-                            <img src="./img/idibujo.png" alt="">
+                            <img src="./img/idibujo.png" alt="" loading="lazy" decoding="async">
                         </div>
                         <div class="project-top">
                             <h3>iDibujo</h3>
@@ -167,7 +168,7 @@
 
                     <article class="project-card" data-tags="macos swiftui">
                         <div class="project-media is-image" style="--media-y: 12%;" aria-hidden="true">
-                            <img src="./img/NeatOS.png" alt="">
+                            <img src="./img/NeatOS.png" alt="" loading="lazy" decoding="async">
                         </div>
                         <div class="project-top">
                             <h3>NeatOS</h3>
@@ -201,7 +202,7 @@
 
                     <article class="project-card" data-tags="ios">
                         <div class="project-media is-image" style="--media-y: 16%;" aria-hidden="true">
-                            <img src="./img/tracken.PNG" alt="">
+                            <img src="./img/tracken.PNG" alt="" loading="lazy" decoding="async">
                         </div>
                         <div class="project-top">
                             <h3>Tracken</h3>
@@ -228,7 +229,7 @@
                 <div class="apps">
                     <article class="app-card">
                         <div class="app-media is-image" style="--media-y: 30%;" aria-hidden="true">
-                            <img src="./img/self-analytics.png" alt="">
+                            <img src="./img/self-analytics.png" alt="" loading="lazy" decoding="async">
                         </div>
                         <h3>Device Health: Battery &amp; RAM</h3>
                         <p class="muted">Battery and memory insights with a clean, lightweight UI.</p>
@@ -239,7 +240,7 @@
 
                     <article class="app-card">
                         <div class="app-media is-image" style="--media-y: 22%;" aria-hidden="true">
-                            <img src="./img/tip-calculator.png" alt="">
+                            <img src="./img/tip-calculator.png" alt="" loading="lazy" decoding="async">
                         </div>
                         <h3>Tip Calculator: Split &amp; Save</h3>
                         <p class="muted">Fast tip math, split checks, and saved bills.</p>
@@ -250,7 +251,7 @@
 
                     <article class="app-card">
                         <div class="app-media is-image" style="--media-y: 30%;" aria-hidden="true">
-                            <img src="./img/idibujo.png" alt="">
+                            <img src="./img/idibujo.png" alt="" loading="lazy" decoding="async">
                         </div>
                         <h3>iDibujo: Sketch &amp; Paint</h3>
                         <p class="muted">A SwiftUI sketchbook with a responsive canvas and exports.</p>
@@ -287,7 +288,7 @@
                 <div class="timeline">
                     <article class="exp-item">
                         <h3>Senior Software Engineer, iOS</h3>
-                        <p class="exp-meta">Microsoft · Seattle, WA · Jan 2024 – present</p>
+                        <p class="exp-meta">Microsoft · Seattle, WA · Jan 2024 – Present</p>
                         <ul>
                             <li>Shipped custom SwiftUI for Microsoft Teams (chat search, adaptive layouts, message previews) with strong performance and accessibility on iPhone and iPad.</li>
                             <li>Led architecture and delivery of Sensory Mixer — a production SwiftUI + Combine app with Azure App Insights, personalized for users with sensory needs.</li>
@@ -345,7 +346,7 @@
                     </div>
                     <div class="skill-group">
                         <h3>Frameworks &amp; tools</h3>
-                        <p>Apple APIs, Local persistence, RESTful, WidgetKit, VSCode, Third party libraries</p>
+                        <p>Apple APIs, local persistence, REST APIs, WidgetKit, VS Code, third-party libraries</p>
                     </div>
                     <div class="skill-group">
                         <h3>Architecture</h3>
@@ -422,6 +423,11 @@
     <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
     <script>
         (function () {
+            document.querySelectorAll('ion-icon').forEach(function (i) {
+                i.setAttribute('aria-hidden', 'true');
+                i.setAttribute('focusable', 'false');
+            });
+
             var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
             var storedTheme = window.localStorage ? localStorage.getItem('theme') : null;
             var initialTheme = storedTheme || (prefersDark ? 'dark' : 'light');
@@ -439,23 +445,38 @@
                 });
             }
 
-            function copyEmail(email) {
+            function copyEmail(email, sourceButton) {
                 if (!email) return;
                 var text = String(email);
+                var live = document.getElementById('live-region');
+
+                function flashButton() {
+                    if (!sourceButton) return;
+                    var original = sourceButton.getAttribute('data-original-label') || sourceButton.textContent;
+                    sourceButton.setAttribute('data-original-label', original);
+                    sourceButton.textContent = 'Copied';
+                    window.setTimeout(function () {
+                        sourceButton.textContent = original;
+                    }, 1200);
+                }
+
                 if (navigator.clipboard && navigator.clipboard.writeText) {
                     navigator.clipboard.writeText(text).then(function () {
-                        alert('Email copied.');
+                        if (live) live.textContent = 'Email copied to clipboard.';
+                        flashButton();
                     }).catch(function () {
+                        if (live) live.textContent = 'Email address shown.';
                         alert(text);
                     });
                 } else {
+                    if (live) live.textContent = 'Email address shown.';
                     alert(text);
                 }
             }
 
             document.querySelectorAll('[data-copy-email]').forEach(function (btn) {
                 btn.addEventListener('click', function () {
-                    copyEmail(btn.getAttribute('data-email'));
+                    copyEmail(btn.getAttribute('data-email'), btn);
                 });
             });
 
@@ -468,7 +489,13 @@
 
             function setActive(hash) {
                 navLinks.forEach(function (a) {
-                    a.classList.toggle('is-active', a.getAttribute('href') === hash);
+                    var isActive = a.getAttribute('href') === hash;
+                    a.classList.toggle('is-active', isActive);
+                    if (isActive) {
+                        a.setAttribute('aria-current', 'true');
+                    } else {
+                        a.removeAttribute('aria-current');
+                    }
                 });
             }
 
@@ -493,12 +520,26 @@
             var cards = Array.prototype.slice.call(document.querySelectorAll('.project-card[data-tags]'));
 
             function applyFilter(tag) {
-                chips.forEach(function (c) { c.classList.toggle('is-active', c.getAttribute('data-filter') === tag); });
+                chips.forEach(function (c) {
+                    var isActive = c.getAttribute('data-filter') === tag;
+                    c.classList.toggle('is-active', isActive);
+                    c.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+                });
                 cards.forEach(function (card) {
                     var tags = (card.getAttribute('data-tags') || '').split(/\s+/);
                     var show = tag === 'all' || tags.indexOf(tag) !== -1;
                     card.style.display = show ? '' : 'none';
                 });
+
+                var live = document.getElementById('live-region');
+                if (live) {
+                    var label = tag === 'all' ? 'All projects' :
+                        tag === 'ios' ? 'iOS projects' :
+                            tag === 'macos' ? 'macOS projects' :
+                                tag === 'library' ? 'Library projects' :
+                                    'Filtered projects';
+                    live.textContent = 'Showing ' + label + '.';
+                }
             }
 
             chips.forEach(function (chip) {
