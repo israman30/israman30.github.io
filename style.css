@@ -12,24 +12,31 @@
     --accent: #5b63ff;
     --accent-2: #00c2ff;
     --ring: rgba(91, 99, 255, 0.35);
+    --active-bg: rgba(91, 99, 255, 0.10);
+    --active-border: rgba(91, 99, 255, 0.38);
     --radius: 14px;
     --radius-sm: 12px;
     --max: 1100px;
 }
 
 html[data-theme="dark"] {
-    --bg: #0b0f17;
-    --surface: #0f172a;
-    --surface-2: #111c33;
-    --text: rgba(255, 255, 255, 0.92);
-    --muted: rgba(255, 255, 255, 0.72);
-    --faint: rgba(255, 255, 255, 0.58);
+    /* VS Code-ish ash/charcoal palette */
+    --bg: #1e1e1e;
+    --surface: #252526;
+    --surface-2: #2d2d30;
+    --text: rgba(212, 212, 212, 0.95);
+    --muted: rgba(212, 212, 212, 0.72);
+    --faint: rgba(212, 212, 212, 0.56);
     --border: rgba(255, 255, 255, 0.10);
-    --shadow: 0 18px 50px rgba(0, 0, 0, 0.40);
-    --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.35);
-    --accent: #7c87ff;
-    --accent-2: #00c2ff;
-    --ring: rgba(124, 135, 255, 0.35);
+    --shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
+    --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.55);
+
+    /* Subtle non-blue accent (teal → purple) */
+    --accent: #4ec9b0;
+    --accent-2: #c586c0;
+    --ring: rgba(78, 201, 176, 0.28);
+    --active-bg: rgba(255, 255, 255, 0.06);
+    --active-border: rgba(255, 255, 255, 0.14);
 }
 
 * {
@@ -210,8 +217,8 @@ a:hover {
 
 .icon-link:hover {
     text-decoration: none;
-    border-color: rgba(91, 99, 255, 0.35);
-    box-shadow: 0 0 0 4px rgba(91, 99, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.08);
 }
 
 .icon-link ion-icon {
@@ -239,14 +246,14 @@ a:hover {
 
 .section-nav a:hover {
     text-decoration: none;
-    border-color: rgba(91, 99, 255, 0.35);
+    border-color: rgba(255, 255, 255, 0.18);
     background: var(--surface);
     color: var(--text);
 }
 
 .section-nav a.is-active {
-    background: rgba(91, 99, 255, 0.10);
-    border-color: rgba(91, 99, 255, 0.38);
+    background: var(--active-bg);
+    border-color: var(--active-border);
     color: var(--text);
 }
 
@@ -267,8 +274,8 @@ a:hover {
 }
 
 .theme-toggle:hover {
-    box-shadow: 0 0 0 4px rgba(91, 99, 255, 0.12);
-    border-color: rgba(91, 99, 255, 0.35);
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.18);
 }
 
 .theme-toggle ion-icon {
@@ -303,12 +310,14 @@ a:hover {
 
 .btn:hover {
     text-decoration: none;
-    border-color: rgba(91, 99, 255, 0.35);
-    box-shadow: 0 0 0 4px rgba(91, 99, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.08);
 }
 
 .btn.primary {
-    background: linear-gradient(140deg, rgba(91, 99, 255, 0.95), rgba(0, 194, 255, 0.88));
+    /* Fallback first (works everywhere), then enhanced blend for modern browsers */
+    background: linear-gradient(140deg, var(--accent), var(--accent-2));
+    background: linear-gradient(140deg, color-mix(in oklab, var(--accent) 80%, #ffffff 0%), color-mix(in oklab, var(--accent-2) 80%, #ffffff 0%));
     border-color: transparent;
     color: rgba(255, 255, 255, 0.95);
 }
@@ -342,7 +351,7 @@ a:hover {
 
 .hero {
     padding: 22px 18px 18px;
-    background: linear-gradient(140deg, rgba(91, 99, 255, 0.10), rgba(0, 194, 255, 0.08));
+    background: linear-gradient(140deg, rgba(0, 0, 0, 0.04), rgba(255, 255, 255, 0.02));
     border-bottom: 1px solid var(--border);
 }
 
@@ -466,8 +475,8 @@ a:hover {
 }
 
 .chip.is-active {
-    background: rgba(91, 99, 255, 0.18);
-    border-color: rgba(91, 99, 255, 0.38);
+    background: var(--active-bg);
+    border-color: var(--active-border);
     color: var(--text);
 }
 
@@ -503,12 +512,25 @@ a:hover {
     height: 110px;
     border-radius: calc(var(--radius) - 6px);
     border: 1px solid var(--border);
-    background: linear-gradient(140deg, rgba(91, 99, 255, 0.16), rgba(0, 194, 255, 0.12));
+    background: linear-gradient(140deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 12px;
     overflow: hidden;
+}
+
+.project-media.is-image {
+    background: var(--surface);
+    padding: 0;
+}
+
+.project-media.is-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
 }
 
 .project-media ion-icon {
@@ -518,19 +540,19 @@ a:hover {
 }
 
 .project-media[data-variant="finance"] {
-    background: linear-gradient(140deg, rgba(91, 99, 255, 0.18), rgba(21, 215, 166, 0.12));
+    background: linear-gradient(140deg, rgba(78, 201, 176, 0.14), rgba(255, 255, 255, 0.03));
 }
 .project-media[data-variant="art"] {
-    background: linear-gradient(140deg, rgba(255, 95, 109, 0.16), rgba(0, 194, 255, 0.12));
+    background: linear-gradient(140deg, rgba(197, 134, 192, 0.14), rgba(255, 255, 255, 0.03));
 }
 .project-media[data-variant="desktop"] {
-    background: linear-gradient(140deg, rgba(0, 194, 255, 0.16), rgba(91, 99, 255, 0.12));
+    background: linear-gradient(140deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.03));
 }
 .project-media[data-variant="library"] {
-    background: linear-gradient(140deg, rgba(155, 81, 224, 0.16), rgba(0, 194, 255, 0.12));
+    background: linear-gradient(140deg, rgba(197, 134, 192, 0.12), rgba(78, 201, 176, 0.10));
 }
 .project-media[data-variant="tracking"] {
-    background: linear-gradient(140deg, rgba(21, 215, 166, 0.16), rgba(91, 99, 255, 0.12));
+    background: linear-gradient(140deg, rgba(78, 201, 176, 0.14), rgba(255, 255, 255, 0.03));
 }
 
 .project-card:hover,
@@ -538,8 +560,8 @@ a:hover {
 .exp-item:hover,
 .skill-group:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 22px rgba(15, 23, 42, 0.10);
-    border-color: rgba(91, 99, 255, 0.25);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.28);
+    border-color: rgba(255, 255, 255, 0.16);
 }
 
 .project-top {
@@ -609,8 +631,8 @@ a:hover {
 }
 
 .project-links a:hover {
-    border-color: rgba(91, 99, 255, 0.35);
-    box-shadow: 0 0 0 4px rgba(91, 99, 255, 0.10);
+    border-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.08);
     text-decoration: none;
 }
 
@@ -636,7 +658,7 @@ a:hover {
     height: 86px;
     border-radius: calc(var(--radius) - 6px);
     border: 1px solid var(--border);
-    background: linear-gradient(140deg, rgba(91, 99, 255, 0.14), rgba(0, 194, 255, 0.10));
+    background: linear-gradient(140deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
     display: flex;
     align-items: center;
     justify-content: center;
