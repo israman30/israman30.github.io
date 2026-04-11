@@ -673,10 +673,39 @@ html[data-theme="dark"] .project-media.is-image::after {
     border-radius: calc(var(--radius) - 6px);
     border: 1px solid var(--border);
     background: linear-gradient(140deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.app-media.is-image {
+    background: var(--surface);
+    padding: 0;
+    display: block;
+}
+
+.app-media.is-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: 50% var(--media-y, 35%);
+    transform: scale(var(--media-zoom, 1));
+}
+
+.app-media.is-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0) 60%);
+}
+
+html[data-theme="dark"] .app-media.is-image::after {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0) 60%);
 }
 
 .app-media ion-icon {
