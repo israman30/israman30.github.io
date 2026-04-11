@@ -4,209 +4,454 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Israel Manzo — Senior Software & Mobile Architect specializing in iOS (SwiftUI/UIKit), accessibility, and scalable mobile architecture.">
+    <meta name="theme-color" content="#0b0f17">
     <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Israel Manzo — Senior iOS Engineer</title>
+    <title>Israel Manzo — Senior Software & Mobile Architect</title>
 </head>
 <body>
-    <section class="left">
-        <img src="./img/me2.jpg" alt="Israel Manzo">
-        <ul>
-            <li><a href="https://github.com/israman30" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-github"></ion-icon></a></li>
-            <li><a href="https://twitter.com/israman30" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-twitter"></ion-icon></a></li>
-            <li><a href="https://www.linkedin.com/in/israel-manzo/" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-            <li><a href="mailto:israelmanzo814@gmail.com"><ion-icon name="mail"></ion-icon></a></li>
-            <li><a href="/doc/IsraelManzoMobileResume@.pdf" download=""><ion-icon name="download"></ion-icon></a></li>
-        </ul>
-        <p>israman30 &reg;</p>
-    </section>
-    <section class="right">
-        <header class="hero">
-            <h1>Israel Manzo</h1>
-            <h2>Senior Software Engineer, iOS</h2>
-            <p class="intro">
-                Senior Software Engineer focused on iOS with 9+ years of experience shipping production apps,
-                accessibility-first design, and scalable mobile architecture. I build thoughtful SwiftUI and UIKit
-                experiences, mentor engineers, and partner across product, design, and backend to deliver reliable software.
-            </p>
-        </header>
+    <a class="skip-link" href="#content">Skip to content</a>
 
-        <section class="block" aria-labelledby="skills-heading">
-            <h2 id="skills-heading">Skill set</h2>
-            <div class="skill-grid">
-                <div class="skill-group">
-                    <h3>iOS development</h3>
-                    <p>Swift, SwiftUI, UIKit, Objective-C, iOS SDK, Xcode</p>
+    <div class="layout">
+        <aside class="sidebar" aria-label="Profile">
+            <div class="sidebar-inner">
+                <div class="avatar-wrap">
+                    <img class="avatar" src="./img/me2.jpg" alt="Israel Manzo profile photo">
                 </div>
-                <div class="skill-group">
-                    <h3>Frameworks &amp; tools</h3>
-                    <p>UIKit, Accessibility APIs, Core Data, RESTful APIs, SwiftUI Preview, DateFormatter</p>
+
+                <div class="identity">
+                    <h1>Israel Manzo</h1>
+                    <p class="role">Senior Software &amp; Mobile Architect</p>
+                    <p class="tagline">iOS · SwiftUI/UIKit · Accessibility · Scalable architecture</p>
                 </div>
-                <div class="skill-group">
-                    <h3>Architecture</h3>
-                    <p>MVVM, MVC, modular architecture, reusable component design, scalable design systems</p>
+
+                <div class="cta-row" role="group" aria-label="Primary actions">
+                    <a class="btn primary" href="./doc/IsraelManzoMobileResume@.pdf" download>Download resume</a>
+                    <a class="btn ghost" href="mailto:israelmanzo814@gmail.com">Email</a>
                 </div>
-                <div class="skill-group">
-                    <h3>Development</h3>
-                    <p>iOS (iPhone / iPad), Android</p>
+
+                <div class="social" aria-label="Social links">
+                    <a class="icon-link" href="https://github.com/israman30" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </a>
+                    <a class="icon-link" href="https://www.linkedin.com/in/israel-manzo/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                    <a class="icon-link" href="https://apps.apple.com/us/search?term=Israel%20Manzo&entity=software" target="_blank" rel="noopener noreferrer" aria-label="App Store search for Israel Manzo apps">
+                        <ion-icon name="logo-apple"></ion-icon>
+                    </a>
                 </div>
-                <div class="skill-group">
-                    <h3>DevOps &amp; tooling</h3>
-                    <p>Git, GitHub, GitLab, Azure DevOps, release &amp; observability practices</p>
-                </div>
-                <div class="skill-group">
-                    <h3>Testing &amp; quality</h3>
-                    <p>Unit testing, TDD, UI testing, XCTest, CI/CD pipelines</p>
-                </div>
-                <div class="skill-group">
-                    <h3>Concurrency &amp; performance</h3>
-                    <p>async/await, multithreading, memory management, performance tuning</p>
-                </div>
-                <div class="skill-group">
-                    <h3>UI / UX</h3>
-                    <p>Auto Layout, Apple HIG, Accessibility (WCAG)</p>
-                </div>
-                <div class="skill-group">
-                    <h3>Soft skills</h3>
-                    <p>Collaboration, troubleshooting, problem solving, Agile / Scrum</p>
-                </div>
-                <div class="skill-group">
-                    <h3>AI-assisted development</h3>
-                    <p>GitHub Copilot, Cursor, ChatGPT — design exploration, refactoring, debugging, productivity</p>
-                </div>
-                <div class="skill-group">
-                    <h3>Leadership &amp; ownership</h3>
-                    <p>Technical decision-making, project ownership, mentoring, code reviews, Agile / Scrum collaboration</p>
-                </div>
+
+                <nav class="section-nav" aria-label="Page sections">
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#apps">Apps</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+
+                <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle theme">
+                    <ion-icon name="moon"></ion-icon>
+                    <span>Theme</span>
+                </button>
             </div>
-        </section>
 
-        <section class="block" aria-labelledby="experience-heading">
-            <h2 id="experience-heading">Experience</h2>
-            <div class="timeline">
-                <article class="exp-item">
-                    <h3>Senior Software Engineer, iOS</h3>
-                    <p class="exp-meta">Microsoft · Seattle, WA · Jan 2024 – present</p>
-                    <ul>
-                        <li>Shipped custom SwiftUI for Microsoft Teams (chat search, adaptive layouts, message previews) with strong performance and accessibility on iPhone and iPad.</li>
-                        <li>Led architecture and delivery of Sensory Mixer — a production SwiftUI + Combine app with Azure App Insights, personalized for users with sensory needs.</li>
-                        <li>Drove WCAG 2.2–oriented features (VoiceOver, Dynamic Type, contrast controls, haptics) and partnered with Accessibility, UX Research, and Design Ops.</li>
-                        <li>Tuned API and search integrations with backend teams; improved latency ~18% and reliability.</li>
-                    </ul>
-                </article>
-                <article class="exp-item">
-                    <h3>Lead iOS Developer</h3>
-                    <p class="exp-meta">Limeade · Seattle, WA · Aug 2021 – Mar 2023</p>
-                    <ul>
-                        <li>Led the iOS team; mentored mid- and junior engineers with accessibility-first patterns and Apple best practices.</li>
-                        <li>Built and maintained modular SwiftUI / UIKit libraries for iPhone and iPad.</li>
-                        <li>Ran CI/CD in Azure DevOps for automated testing and dependable releases; collaborated in Agile / Scrum with QA, DevOps, and product.</li>
-                    </ul>
-                </article>
-                <article class="exp-item">
-                    <h3>Lead iOS Developer</h3>
-                    <p class="exp-meta">EE Solution · New York, NY · Mar 2021 – Aug 2021</p>
-                    <ul>
-                        <li>Delivered a production iOS / iPad app in SwiftUI for a high-traffic enterprise environment.</li>
-                        <li>Implemented REST APIs, push notifications, offline caching, and resilient data layers.</li>
-                        <li>Promoted unit testing and TDD; mentored on Swift, modularity, and scalable design.</li>
-                    </ul>
-                </article>
-                <article class="exp-item">
-                    <h3>iOS Developer</h3>
-                    <p class="exp-meta">FlaveApp · Baltimore, MD · Feb 2021 – May 2021</p>
-                    <ul>
-                        <li>Enhanced a hybrid UIKit / SwiftUI app with focus on accessibility and Apple HIG.</li>
-                        <li>Improved performance and UX; integrated AWS (S3, Lambda, API Gateway) with Node.js backends.</li>
-                    </ul>
-                </article>
-                <article class="exp-item">
-                    <h3>Full Stack Developer</h3>
-                    <p class="exp-meta">Plate Rate · New York, NY · Jun 2019 – Jan 2021</p>
-                    <ul>
-                        <li>Built responsive web UIs with React, HTML5, CSS3, and ES6 JavaScript.</li>
-                        <li>Ran E2E tests with Cypress and WebDriver; kept quality high through reviews and QA partnership.</li>
-                    </ul>
-                </article>
-                <article class="exp-item">
-                    <h3>iOS / Android — My New News</h3>
-                    <p class="exp-meta">Freelance / independent · New York, NY · 2016 – 2020</p>
-                    <ul>
-                        <li>Cross-platform news app: Swift (iOS) and Kotlin (Android) with REST APIs, caching, and performance-focused media handling.</li>
-                        <li>Improved Android UX with coroutines and Jetpack; iterative releases with solid testing discipline.</li>
-                    </ul>
-                </article>
-            </div>
-        </section>
+            <p class="sidebar-foot">israman30 &reg;</p>
+        </aside>
 
-        <section class="block" aria-labelledby="certs-heading">
-            <h2 id="certs-heading">Certifications &amp; recognitions</h2>
-            <ul class="cert-list">
-                <li>
-                    <strong>Accessibility in Digital Products</strong> — QualityLogic, Washington State, 2021<br>
-                    <span class="cert-detail">WCAG-focused certification: screen readers, keyboard navigation, inclusive design (earned while at Limeade).</span>
-                </li>
-                <li>
-                    <strong>Microsoft Cloud+AI Project — Innovation Award (2nd place)</strong> — Microsoft, 2024<br>
-                    <span class="cert-detail">Runner-up for leading an iOS Accessibility Assistant built with SwiftUI and inclusive design.</span>
-                </li>
-                <li>
-                    <strong>Published iOS applications — App Store</strong><br>
-                    <span class="cert-detail">Two apps shipped end-to-end: provisioning, signing, App Store Connect, App Review, and compliance.</span>
-                </li>
-            </ul>
-        </section>
+        <main id="content" class="content">
+            <header class="hero">
+                <p class="eyebrow">Mobile architecture · iOS platform engineering</p>
+                <h2>Designing and shipping accessible, high-quality mobile products.</h2>
+                <p class="intro" id="about">
+                    I’m a senior iOS-focused engineer and mobile architect with 9+ years of experience shipping production apps.
+                    I build thoughtful SwiftUI and UIKit experiences, mentor engineers, and partner across product, design, and backend
+                    to deliver reliable software with strong accessibility and performance.
+                </p>
 
-        <section class="block work" aria-labelledby="work-heading">
-            <h2 id="work-heading">Selected projects</h2>
-            <div class="projects">
-                <article class="project-card">
-                    <h3>iDibujo</h3>
+                <div class="hero-actions" role="group" aria-label="Hero actions">
+                    <a class="btn primary" href="#projects">Explore projects</a>
+                    <button class="btn ghost" type="button" data-copy-email data-email="israelmanzo814@gmail.com">Copy email</button>
+                </div>
+
+                <div class="stats" aria-label="Highlights">
+                    <div class="stat">
+                        <span class="stat-kpi">9+</span>
+                        <span class="stat-label">Years shipping apps</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-kpi">SwiftUI + UIKit</span>
+                        <span class="stat-label">Production experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-kpi">WCAG</span>
+                        <span class="stat-label">Accessibility-first</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="block" id="projects" aria-labelledby="projects-heading">
+                <div class="block-head">
+                    <h2 id="projects-heading">Projects (GitHub)</h2>
+                    <p class="muted">A curated set of open-source and portfolio projects.</p>
+                </div>
+
+                <div class="filters" role="group" aria-label="Project filters">
+                    <button class="chip is-active" type="button" data-filter="all">All</button>
+                    <button class="chip" type="button" data-filter="ios">iOS</button>
+                    <button class="chip" type="button" data-filter="macos">macOS</button>
+                    <button class="chip" type="button" data-filter="library">Library</button>
+                </div>
+
+                <div class="projects">
+                    <article class="project-card" data-tags="ios swiftui widgetkit">
+                        <div class="project-top">
+                            <h3>Self Analytics</h3>
+                            <span class="badge">iOS</span>
+                        </div>
+                        <p class="project-desc">Device health monitor concept with real-time metrics, smart alerts, security scan, history, and WidgetKit snapshots.</p>
+                        <ul class="tag-row" aria-label="Tech stack">
+                            <li>SwiftUI</li><li>WidgetKit</li><li>BackgroundTasks</li><li>UserNotifications</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/israman30/Self-Analytics" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-github"></ion-icon> GitHub</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-tags="ios uikit swiftui widgetkit">
+                        <div class="project-top">
+                            <h3>Tip Calculator</h3>
+                            <span class="badge">iOS</span>
+                        </div>
+                        <p class="project-desc">Fast tip math, split checks, saved bills, and widget shortcuts—UIKit-first with SwiftUI used where it shines.</p>
+                        <ul class="tag-row" aria-label="Tech stack">
+                            <li>UIKit</li><li>SwiftUI</li><li>Core Data</li><li>WidgetKit</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/israman30/Tip-Calculator" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-github"></ion-icon> GitHub</a>
+                            <a href="https://apps.apple.com/us/search?term=Tip%20Calculator&entity=software" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-apple"></ion-icon> App Store</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-tags="ios swiftui">
+                        <div class="project-top">
+                            <h3>iDibujo</h3>
+                            <span class="badge">iOS</span>
+                        </div>
+                        <p class="project-desc">A lightweight SwiftUI drawing app with a responsive canvas, color picking, brush sizing, and export to Photos.</p>
+                        <ul class="tag-row" aria-label="Tech stack">
+                            <li>SwiftUI</li><li>Canvas</li><li>PhotoKit</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/israman30/iDibujo" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-github"></ion-icon> GitHub</a>
+                            <a href="https://apps.apple.com/us/app/idibujo/id1237783038" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-apple"></ion-icon> App Store</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-tags="macos swiftui">
+                        <div class="project-top">
+                            <h3>MacOS-Repo</h3>
+                            <span class="badge">macOS</span>
+                        </div>
+                        <p class="project-desc">A collection of macOS projects and experiments (Swift / SwiftUI) exploring desktop patterns and utilities.</p>
+                        <ul class="tag-row" aria-label="Tech stack">
+                            <li>Swift</li><li>SwiftUI</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/israman30/MacOS-Repo" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-github"></ion-icon> GitHub</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-tags="library swiftpm swiftui">
+                        <div class="project-top">
+                            <h3>Utils</h3>
+                            <span class="badge">Library</span>
+                        </div>
+                        <p class="project-desc">A Swift Package of reusable SwiftUI utilities: buttons, toasts, form components, grids, accessibility helpers, and more.</p>
+                        <ul class="tag-row" aria-label="Tech stack">
+                            <li>SwiftUI</li><li>Swift Package Manager</li><li>Accessibility</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/israman30/Utils" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-github"></ion-icon> GitHub</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-tags="ios">
+                        <div class="project-top">
+                            <h3>Tracken</h3>
+                            <span class="badge">iOS</span>
+                        </div>
+                        <p class="project-desc">Project link included in portfolio (repo visibility may vary). If public, this card can be expanded with features and screenshots.</p>
+                        <ul class="tag-row" aria-label="Tech stack">
+                            <li>iOS</li><li>Swift</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/israman30/Tracken" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-github"></ion-icon> GitHub</a>
+                            <a href="https://apps.apple.com/us/search?term=Tracken&entity=software" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-apple"></ion-icon> App Store</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="block" id="apps" aria-labelledby="apps-heading">
+                <div class="block-head">
+                    <h2 id="apps-heading">Apps (App Store)</h2>
+                    <p class="muted">Published apps and live store links.</p>
+                </div>
+
+                <div class="apps">
+                    <article class="app-card">
+                        <h3>iDibujo</h3>
+                        <p class="muted">SwiftUI drawing app.</p>
+                        <a class="btn small" href="https://apps.apple.com/us/app/idibujo/id1237783038" target="_blank" rel="noopener noreferrer">
+                            <ion-icon name="logo-apple"></ion-icon> View on App Store
+                        </a>
+                    </article>
+
+                    <article class="app-card">
+                        <h3>The Chalkboard</h3>
+                        <p class="muted">iOS app (published).</p>
+                        <a class="btn small" href="https://apps.apple.com/us/app/the-chalkboard/id1221734087" target="_blank" rel="noopener noreferrer">
+                            <ion-icon name="logo-apple"></ion-icon> View on App Store
+                        </a>
+                    </article>
+
+                    <article class="app-card">
+                        <h3>My New News</h3>
+                        <p class="muted">News app (published).</p>
+                        <a class="btn small" href="https://apps.apple.com/us/app/my-new-news/id1210234219" target="_blank" rel="noopener noreferrer">
+                            <ion-icon name="logo-apple"></ion-icon> View on App Store
+                        </a>
+                    </article>
+                </div>
+
+                <p class="note muted">
+                    Looking for other apps? Try the App Store search:
+                    <a href="https://apps.apple.com/us/search?term=Israel%20Manzo&entity=software" target="_blank" rel="noopener noreferrer">Israel Manzo</a>
+                    or
+                    <a href="https://apps.apple.com/us/search?term=israman30&entity=software" target="_blank" rel="noopener noreferrer">israman30</a>.
+                </p>
+            </section>
+
+            <section class="block" id="experience" aria-labelledby="experience-heading">
+                <div class="block-head">
+                    <h2 id="experience-heading">Experience</h2>
+                    <p class="muted">Leadership, architecture, delivery, and accessibility-first mobile engineering.</p>
+                </div>
+
+                <div class="callout">
+                    <h3>Senior Software &amp; Mobile Architect (focus areas)</h3>
                     <ul>
-                        <li><a href="https://apps.apple.com/us/app/idibujo/id1237783038" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-apple"></ion-icon> App Store</a></li>
-                        <li><a href="https://github.com/israman30/iDibujo" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-github"></ion-icon> GitHub</a></li>
+                        <li>Define mobile architecture, modularization strategy, and engineering standards.</li>
+                        <li>Drive cross-functional delivery across iOS, design, backend, QA, and release engineering.</li>
+                        <li>Build accessibility-first UI systems (VoiceOver, Dynamic Type, contrast, motion).</li>
+                        <li>Improve performance and reliability with observability, profiling, and CI/CD practices.</li>
                     </ul>
-                </article>
-                <article class="project-card">
-                    <h3>Hob Lux</h3>
-                    <ul>
-                        <li><a href="#" class="coming-soon" data-msg="Coming soon to the App Store."><ion-icon name="logo-apple"></ion-icon> App Store</a></li>
-                        <li><a href="https://github.com/israman30/buildgingMgFinder" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-github"></ion-icon> GitHub</a></li>
-                    </ul>
-                </article>
-                <article class="project-card">
-                    <h3>The Chalkboard</h3>
-                    <ul>
-                        <li><a href="https://apps.apple.com/us/app/the-chalkboard/id1221734087" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-apple"></ion-icon> App Store</a></li>
-                        <li><a href="https://github.com/israman30/TheChalkboard-Clone" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-github"></ion-icon> GitHub</a></li>
-                    </ul>
-                </article>
-                <article class="project-card">
-                    <h3>My New News</h3>
-                    <ul>
-                        <li><a href="https://apps.apple.com/us/app/my-new-news/id1210234219" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-apple"></ion-icon> App Store</a></li>
-                        <li><a href="https://github.com/israman30/NewsApp" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-github"></ion-icon> GitHub</a></li>
-                    </ul>
-                </article>
-                <article class="project-card">
-                    <h3>Calculate Tip</h3>
-                    <ul>
-                        <li><a href="#" class="coming-soon" data-msg="Coming soon to the App Store."><ion-icon name="logo-apple"></ion-icon> App Store</a></li>
-                        <li><a href="https://github.com/israman30/Tip-Calculator" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-github"></ion-icon> GitHub</a></li>
-                    </ul>
-                </article>
-            </div>
-        </section>
-    </section>
+                </div>
+
+                <div class="timeline">
+                    <article class="exp-item">
+                        <h3>Senior Software Engineer, iOS</h3>
+                        <p class="exp-meta">Microsoft · Seattle, WA · Jan 2024 – present</p>
+                        <ul>
+                            <li>Shipped custom SwiftUI for Microsoft Teams (chat search, adaptive layouts, message previews) with strong performance and accessibility on iPhone and iPad.</li>
+                            <li>Led architecture and delivery of Sensory Mixer — a production SwiftUI + Combine app with Azure App Insights, personalized for users with sensory needs.</li>
+                            <li>Drove WCAG 2.2–oriented features (VoiceOver, Dynamic Type, contrast controls, haptics) and partnered with Accessibility, UX Research, and Design Ops.</li>
+                            <li>Tuned API and search integrations with backend teams; improved latency ~18% and reliability.</li>
+                        </ul>
+                    </article>
+                    <article class="exp-item">
+                        <h3>Lead iOS Developer</h3>
+                        <p class="exp-meta">Limeade · Seattle, WA · Aug 2021 – Mar 2023</p>
+                        <ul>
+                            <li>Led the iOS team; mentored mid- and junior engineers with accessibility-first patterns and Apple best practices.</li>
+                            <li>Built and maintained modular SwiftUI / UIKit libraries for iPhone and iPad.</li>
+                            <li>Ran CI/CD in Azure DevOps for automated testing and dependable releases; collaborated in Agile / Scrum with QA, DevOps, and product.</li>
+                        </ul>
+                    </article>
+                    <article class="exp-item">
+                        <h3>Lead iOS Developer</h3>
+                        <p class="exp-meta">EE Solution · New York, NY · Mar 2021 – Aug 2021</p>
+                        <ul>
+                            <li>Delivered a production iOS / iPad app in SwiftUI for a high-traffic enterprise environment.</li>
+                            <li>Implemented REST APIs, push notifications, offline caching, and resilient data layers.</li>
+                            <li>Promoted unit testing and TDD; mentored on Swift, modularity, and scalable design.</li>
+                        </ul>
+                    </article>
+                    <article class="exp-item">
+                        <h3>iOS Developer</h3>
+                        <p class="exp-meta">FlaveApp · Baltimore, MD · Feb 2021 – May 2021</p>
+                        <ul>
+                            <li>Enhanced a hybrid UIKit / SwiftUI app with focus on accessibility and Apple HIG.</li>
+                            <li>Improved performance and UX; integrated AWS (S3, Lambda, API Gateway) with Node.js backends.</li>
+                        </ul>
+                    </article>
+                    <article class="exp-item">
+                        <h3>Full Stack Developer</h3>
+                        <p class="exp-meta">Plate Rate · New York, NY · Jun 2019 – Jan 2021</p>
+                        <ul>
+                            <li>Built responsive web UIs with React, HTML5, CSS3, and ES6 JavaScript.</li>
+                            <li>Ran E2E tests with Cypress and WebDriver; kept quality high through reviews and QA partnership.</li>
+                        </ul>
+                    </article>
+                    <article class="exp-item">
+                        <h3>iOS / Android — My New News</h3>
+                        <p class="exp-meta">Freelance / independent · New York, NY · 2016 – 2020</p>
+                        <ul>
+                            <li>Cross-platform news app: Swift (iOS) and Kotlin (Android) with REST APIs, caching, and performance-focused media handling.</li>
+                            <li>Improved Android UX with coroutines and Jetpack; iterative releases with solid testing discipline.</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="block" id="skills" aria-labelledby="skills-heading">
+                <div class="block-head">
+                    <h2 id="skills-heading">Skills</h2>
+                    <p class="muted">Breadth across platform engineering, product delivery, and leadership.</p>
+                </div>
+
+                <div class="skill-grid">
+                    <div class="skill-group">
+                        <h3>iOS development</h3>
+                        <p>Swift, SwiftUI, UIKit, Objective-C, iOS SDK, Xcode</p>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Frameworks &amp; tools</h3>
+                        <p>Accessibility APIs, Core Data, RESTful APIs, WidgetKit, Charts</p>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Architecture</h3>
+                        <p>MVVM, MVC, modular architecture, reusable component design, design systems</p>
+                    </div>
+                    <div class="skill-group">
+                        <h3>DevOps &amp; tooling</h3>
+                        <p>Git, GitHub, GitLab, Azure DevOps, CI/CD, release &amp; observability practices</p>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Testing &amp; quality</h3>
+                        <p>Unit testing, TDD, UI testing, XCTest, automation pipelines</p>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Concurrency &amp; performance</h3>
+                        <p>async/await, memory management, profiling, performance tuning</p>
+                    </div>
+                    <div class="skill-group">
+                        <h3>UI / UX</h3>
+                        <p>Auto Layout, Apple HIG, WCAG-oriented accessibility patterns</p>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Leadership</h3>
+                        <p>Technical decision-making, project ownership, mentoring, code reviews, Agile / Scrum</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="block" aria-labelledby="certs-heading">
+                <div class="block-head">
+                    <h2 id="certs-heading">Certifications &amp; recognitions</h2>
+                </div>
+
+                <ul class="cert-list">
+                    <li>
+                        <strong>Accessibility in Digital Products</strong> — QualityLogic, Washington State, 2021<br>
+                        <span class="cert-detail">WCAG-focused certification: screen readers, keyboard navigation, inclusive design (earned while at Limeade).</span>
+                    </li>
+                    <li>
+                        <strong>Microsoft Cloud+AI Project — Innovation Award (2nd place)</strong> — Microsoft, 2024<br>
+                        <span class="cert-detail">Runner-up for leading an iOS Accessibility Assistant built with SwiftUI and inclusive design.</span>
+                    </li>
+                    <li>
+                        <strong>Published iOS applications — App Store</strong><br>
+                        <span class="cert-detail">End-to-end shipping: provisioning, signing, App Store Connect, App Review, and compliance.</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="block" id="contact" aria-labelledby="contact-heading">
+                <div class="block-head">
+                    <h2 id="contact-heading">Contact</h2>
+                    <p class="muted">For architecture, iOS engineering, accessibility, or collaboration.</p>
+                </div>
+
+                <div class="contact-card">
+                    <div>
+                        <p class="contact-label">Email</p>
+                        <a class="contact-value" href="mailto:israelmanzo814@gmail.com">israelmanzo814@gmail.com</a>
+                    </div>
+                    <div class="contact-actions" role="group" aria-label="Contact actions">
+                        <button class="btn small ghost" type="button" data-copy-email data-email="israelmanzo814@gmail.com">Copy email</button>
+                        <a class="btn small primary" href="./doc/IsraelManzoMobileResume@.pdf" download>Download resume</a>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <p class="muted">© <span id="year"></span> Israel Manzo. Built with HTML/CSS.</p>
+            </footer>
+        </main>
+    </div>
 
     <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
     <script>
-        document.querySelectorAll('.coming-soon').forEach(function (link) {
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-                alert(link.getAttribute('data-msg') || 'Coming soon.');
+        (function () {
+            var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            var storedTheme = window.localStorage ? localStorage.getItem('theme') : null;
+            var initialTheme = storedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', initialTheme);
+
+            var year = document.getElementById('year');
+            if (year) year.textContent = String(new Date().getFullYear());
+
+            var toggle = document.querySelector('[data-theme-toggle]');
+            if (toggle) {
+                toggle.addEventListener('click', function () {
+                    var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+                    document.documentElement.setAttribute('data-theme', next);
+                    try { localStorage.setItem('theme', next); } catch (e) {}
+                });
+            }
+
+            function copyEmail(email) {
+                if (!email) return;
+                var text = String(email);
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(text).then(function () {
+                        alert('Email copied.');
+                    }).catch(function () {
+                        alert(text);
+                    });
+                } else {
+                    alert(text);
+                }
+            }
+
+            document.querySelectorAll('[data-copy-email]').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    copyEmail(btn.getAttribute('data-email'));
+                });
             });
-        });
+
+            var chips = Array.prototype.slice.call(document.querySelectorAll('[data-filter]'));
+            var cards = Array.prototype.slice.call(document.querySelectorAll('.project-card[data-tags]'));
+
+            function applyFilter(tag) {
+                chips.forEach(function (c) { c.classList.toggle('is-active', c.getAttribute('data-filter') === tag); });
+                cards.forEach(function (card) {
+                    var tags = (card.getAttribute('data-tags') || '').split(/\s+/);
+                    var show = tag === 'all' || tags.indexOf(tag) !== -1;
+                    card.style.display = show ? '' : 'none';
+                });
+            }
+
+            chips.forEach(function (chip) {
+                chip.addEventListener('click', function () {
+                    applyFilter(chip.getAttribute('data-filter') || 'all');
+                });
+            });
+        })();
     </script>
 </body>
 </html>
