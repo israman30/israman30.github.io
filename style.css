@@ -682,30 +682,20 @@ html[data-theme="dark"] .project-media.is-image::after {
 }
 
 .app-media.is-image {
-    background: var(--surface);
-    padding: 0;
-    display: block;
+    /* App Store cards: show the full screenshot inside the banner */
+    background: var(--surface-2);
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .app-media.is-image img {
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: cover;
-    object-position: 50% var(--media-y, 35%);
-    transform: scale(var(--media-zoom, 1));
-}
-
-.app-media.is-image::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0) 60%);
-}
-
-html[data-theme="dark"] .app-media.is-image::after {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0) 60%);
+    object-fit: contain;
+    object-position: center center;
 }
 
 .app-media ion-icon {
