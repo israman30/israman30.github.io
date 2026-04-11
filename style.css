@@ -528,7 +528,7 @@ a:hover {
 
 .project-media.is-image img {
     width: 100%;
-    height: 100%;
+    height: 50%;
     display: block;
     object-fit: cover;
     object-position: 50% var(--media-y, 35%);
