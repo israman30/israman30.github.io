@@ -38,6 +38,12 @@
                     <a class="icon-link" href="https://www.linkedin.com/in/israel-manzo/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                         <ion-icon name="logo-linkedin"></ion-icon>
                     </a>
+                    <a class="icon-link" href="https://www.youtube.com/results?search_query=Israel+Manzo" target="_blank" rel="noopener noreferrer" aria-label="YouTube search for Israel Manzo">
+                        <ion-icon name="logo-youtube"></ion-icon>
+                    </a>
+                    <a class="icon-link" href="https://www.instagram.com/explore/search/keyword/?q=israel%20manzo" target="_blank" rel="noopener noreferrer" aria-label="Instagram search for Israel Manzo">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
                     <a class="icon-link" href="https://apps.apple.com/us/search?term=Israel%20Manzo&entity=software" target="_blank" rel="noopener noreferrer" aria-label="App Store search for Israel Manzo apps">
                         <ion-icon name="logo-apple"></ion-icon>
                     </a>
@@ -53,7 +59,7 @@
                 </nav>
 
                 <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle theme">
-                    <ion-icon name="moon"></ion-icon>
+                    <ion-icon name="contrast"></ion-icon>
                     <span>Theme</span>
                 </button>
             </div>
@@ -107,6 +113,9 @@
 
                 <div class="projects">
                     <article class="project-card" data-tags="ios swiftui widgetkit">
+                        <div class="project-media" data-variant="analytics" aria-hidden="true">
+                            <ion-icon name="pulse"></ion-icon>
+                        </div>
                         <div class="project-top">
                             <h3>Self Analytics</h3>
                             <span class="badge">iOS</span>
@@ -121,6 +130,9 @@
                     </article>
 
                     <article class="project-card" data-tags="ios uikit swiftui widgetkit">
+                        <div class="project-media" data-variant="finance" aria-hidden="true">
+                            <ion-icon name="calculator"></ion-icon>
+                        </div>
                         <div class="project-top">
                             <h3>Tip Calculator</h3>
                             <span class="badge">iOS</span>
@@ -136,6 +148,9 @@
                     </article>
 
                     <article class="project-card" data-tags="ios swiftui">
+                        <div class="project-media" data-variant="art" aria-hidden="true">
+                            <ion-icon name="brush"></ion-icon>
+                        </div>
                         <div class="project-top">
                             <h3>iDibujo</h3>
                             <span class="badge">iOS</span>
@@ -151,6 +166,9 @@
                     </article>
 
                     <article class="project-card" data-tags="macos swiftui">
+                        <div class="project-media" data-variant="desktop" aria-hidden="true">
+                            <ion-icon name="laptop"></ion-icon>
+                        </div>
                         <div class="project-top">
                             <h3>MacOS-Repo</h3>
                             <span class="badge">macOS</span>
@@ -165,6 +183,9 @@
                     </article>
 
                     <article class="project-card" data-tags="library swiftpm swiftui">
+                        <div class="project-media" data-variant="library" aria-hidden="true">
+                            <ion-icon name="cube"></ion-icon>
+                        </div>
                         <div class="project-top">
                             <h3>Utils</h3>
                             <span class="badge">Library</span>
@@ -179,6 +200,9 @@
                     </article>
 
                     <article class="project-card" data-tags="ios">
+                        <div class="project-media" data-variant="tracking" aria-hidden="true">
+                            <ion-icon name="locate"></ion-icon>
+                        </div>
                         <div class="project-top">
                             <h3>Tracken</h3>
                             <span class="badge">iOS</span>
@@ -203,6 +227,7 @@
 
                 <div class="apps">
                     <article class="app-card">
+                        <div class="app-media" aria-hidden="true"><ion-icon name="brush"></ion-icon></div>
                         <h3>iDibujo</h3>
                         <p class="muted">SwiftUI drawing app.</p>
                         <a class="btn small" href="https://apps.apple.com/us/app/idibujo/id1237783038" target="_blank" rel="noopener noreferrer">
@@ -211,6 +236,7 @@
                     </article>
 
                     <article class="app-card">
+                        <div class="app-media" aria-hidden="true"><ion-icon name="create"></ion-icon></div>
                         <h3>The Chalkboard</h3>
                         <p class="muted">iOS app (published).</p>
                         <a class="btn small" href="https://apps.apple.com/us/app/the-chalkboard/id1221734087" target="_blank" rel="noopener noreferrer">
@@ -219,6 +245,7 @@
                     </article>
 
                     <article class="app-card">
+                        <div class="app-media" aria-hidden="true"><ion-icon name="paper"></ion-icon></div>
                         <h3>My New News</h3>
                         <p class="muted">News app (published).</p>
                         <a class="btn small" href="https://apps.apple.com/us/app/my-new-news/id1210234219" target="_blank" rel="noopener noreferrer">
@@ -433,6 +460,36 @@
                     copyEmail(btn.getAttribute('data-email'));
                 });
             });
+
+            // Active section highlight
+            var navLinks = Array.prototype.slice.call(document.querySelectorAll('.section-nav a[href^="#"]'));
+            var sections = navLinks.map(function (a) {
+                var id = (a.getAttribute('href') || '').slice(1);
+                return document.getElementById(id);
+            }).filter(Boolean);
+
+            function setActive(hash) {
+                navLinks.forEach(function (a) {
+                    a.classList.toggle('is-active', a.getAttribute('href') === hash);
+                });
+            }
+
+            if ('IntersectionObserver' in window && sections.length) {
+                var obs = new IntersectionObserver(function (entries) {
+                    var visible = entries.filter(function (e) { return e.isIntersecting; })
+                        .sort(function (a, b) { return b.intersectionRatio - a.intersectionRatio; })[0];
+                    if (visible && visible.target && visible.target.id) {
+                        setActive('#' + visible.target.id);
+                    }
+                }, { root: null, threshold: [0.15, 0.25, 0.35, 0.5] });
+
+                sections.forEach(function (s) { obs.observe(s); });
+            } else {
+                // Fallback: set active on click
+                navLinks.forEach(function (a) {
+                    a.addEventListener('click', function () { setActive(a.getAttribute('href')); });
+                });
+            }
 
             var chips = Array.prototype.slice.call(document.querySelectorAll('[data-filter]'));
             var cards = Array.prototype.slice.call(document.querySelectorAll('.project-card[data-tags]'));
